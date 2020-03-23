@@ -1,0 +1,19 @@
+---
+- name: First Play
+  hosts: routers
+  gather_facts: False
+  connection: local
+  
+  tasks:
+  - name: Task 1
+    ios_command:
+       commands: show ip interface brief
+    register: showresult
+  - name: Showing the result of "show ip interface brief"
+    debug:
+      var: showresult
+  - name: Task 3
+    ios_config:
+      lines:
+        - description - Config by Ansible
+      parents: interface GigabitEthernet0/3

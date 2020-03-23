@@ -1,0 +1,3 @@
+[routers]
+1.1.1.1 ansible_user=samuel ansible_password=samuel
+2.2.2.2 ansible_user=samuel ansible_password=samuel
